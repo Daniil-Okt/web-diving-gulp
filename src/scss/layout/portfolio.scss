@@ -1,0 +1,111 @@
+.portfolio {
+    margin-top: prc(150,1448);
+    position: relative;
+
+    &__container {
+        position: relative;
+    }
+    
+    &__header {
+
+        font-family: 'Exo 2';
+        font-weight: 700;
+        font-size: rem(60);
+
+        @media(max-width:1200px){
+            font-size: rem(46);
+        }
+        @media(max-width:1000px){
+            font-size: rem(36);
+        }
+        @media(max-width:750px){
+            text-align: center;
+        }
+        @media(max-width:768px){
+            font-size: rem(28);
+        }
+        @media(max-width:320px){
+            font-size: rem(18);
+        }
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 60px -15px 0px -15px;
+        @media(max-width:750px){
+            flex-direction: column;
+            height: 50%;
+        overflow: hidden;
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+        flex: 0 1 50%;
+        padding: 0px 15px;
+        
+    }
+
+    &__img {
+        // max-width: 690px;
+        position: relative;
+        width: 100%;
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        
+    }
+    &__img-box {
+    }
+    &__text-box {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        top: 0;
+        left: 0px;
+        height: 100%;
+        background: rgba(38, 38, 38, 0.95);
+        margin: 0px 15px;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.5s ease  0s; 
+        h3 {
+            color:#FFF9F1;
+            font-family: 'Exo 2';
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 43px;
+            text-align: center;
+            margin-bottom: em(10);
+        }
+        p {
+            color:#FFF9F1;
+            font-family: 'Montserrat';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 34px;
+            text-align: center;
+            padding: 0 60px;
+        }
+    }
+    &__card:hover &__text-box{ 
+        opacity: 1;
+    }
+    footer {
+        width: 100%;
+        text-align: right;
+        @media(max-width:750px){
+            text-align: center;
+        }
+    }
+
+    &__button {
+    }
+
+}

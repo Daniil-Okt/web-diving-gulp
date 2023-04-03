@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Montserrat:wght@400;500&family=Source+Sans+Pro&display=swap');
+@font-face {
+    font-family: 'Exo 2';
+    src: url('Exo2-Regular.woff2') format('woff2'),
+        url('Exo2-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

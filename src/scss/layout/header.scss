@@ -1,0 +1,179 @@
+// =====================================================================================================================
+.header {
+  width: 100%;
+  display: block;
+  &.sticky {
+  }
+  // .header__container
+  &__container {
+    height: rem($headerHeight);
+    display: flex;
+    align-items: center;
+  }
+}
+
+// =====================================================================================================================
+.header{
+  position: relative;
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-bottom: em(1);
+  }
+
+  &__menu {
+    max-width: 642px;
+    width: 100%;
+    @media(max-width:1250px){
+        max-width: 500px;
+    }
+    @media(max-width:1050px){
+        max-width: none;
+        z-index: 5;
+        transition: all 0.5s ease  0s;
+    }
+  }
+
+  &__number {
+    margin: auto 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(24);
+
+    @media (max-width:768px) {
+          font-size: 22px;
+    }
+
+    @media (max-width:480px) {
+            font-size: 18px;
+    }
+    
+    @media (max-width:400px) {
+      font-size: 15px;
+    }
+
+  }
+}
+
+.menu {
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none; 
+
+    transition: all 0.3s ease  0s;
+    @media(max-width:1050px){
+        flex-direction: column;
+        text-align: center;
+    }
+  }
+
+  &__item {
+    padding-bottom: 3px;
+  }
+  .menu-open &__item {
+    padding-bottom: 20px;
+  }
+
+  &__link {
+    padding-bottom: 4px;
+    &:hover {
+      background: -webkit-linear-gradient(119.18deg, #66FF75 31.18%, #6BFFD3 79.79%) bottom no-repeat;
+      background: -o-linear-gradient(119.18deg, #66FF75 31.18%, #6BFFD3 79.79%) bottom no-repeat;
+      background: linear-gradient( 119.18deg, #66FF75 31.18%, #6BFFD3 79.79%) bottom no-repeat;
+      background-size: 100% 2px;
+    }
+    @media(max-width:1250px){
+        font-size: rem(20);
+    }
+    @media(max-width:1050px){
+        color: #FFFFFF;
+        font-size: rem(20);
+    }
+  }
+
+  @media(max-width:1050px){
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0px;
+    background: #1E1E1E;
+    padding-top: rem(100);
+
+    position: fixed;
+
+    .menu-open & {
+      top: 0px;
+    }
+  }
+}
+
+// Burger
+
+.icon-menu {
+  display: none;
+  @include media(1050) {
+    display: block;
+    position: relative;
+    width: rem(28);
+    height: rem(16);
+    cursor: pointer;
+    z-index: 5;
+    @media (max-width:768px) {
+      width: rem(21);
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #1E1E1E;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open &{
+      span {
+        width: 0;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+        background-color: #FFFFFF;
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+        background-color: #FFFFFF;
+      }
+    }
+    .menu-open &:hover {
+      &::before,
+      &::after {
+        background-color: #2C9E37;
+        transition: all 150ms ease  0s;
+      }
+    }
+  }
+}

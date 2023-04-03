@@ -1,0 +1,131 @@
+// Заголовки, общие БЄМ блоки и проче...
+body {
+    color: $blackColor;
+}
+a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(29);
+    text-decoration: none;
+    color: $blackColor;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(72);
+    line-height: rem(86);
+
+}
+h2 {
+    font-family: "Exo 2";
+    font-size: rem(36);
+    font-weight: 600;
+    line-height: rem(43);
+
+}
+
+p {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: rem(33.7);
+}
+
+.button {
+    box-sizing: border-box;
+
+    font-family: $mainFont;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding: 28px 66px;
+    
+    background: linear-gradient(119.18deg, #66FF75 31.18%, #6BFFD3 79.79%);
+    cursor: pointer;
+
+    p {
+        position: relative;
+        margin: auto;
+        
+    }
+    transition: all 0.2s ease  0s;
+    &:hover {
+        border: 1px solid #1E1E1E;
+    }
+
+}
+
+.logo {
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: em(36);
+
+    @media (max-width:768px) {
+        font-size: 28px;
+    }
+
+    @media (max-width:480px) {
+            font-size: 20px;
+    }
+
+    @media (max-width:400px) {
+        font-size: 16px;
+    }
+
+    @media (max-width:320px) {
+            font-size: 12px;
+    }
+}
+
+.btn {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(24);
+    padding: 0px;
+    transition: color 0.3s ease  0s;
+    border: none;
+
+    background: none;
+    margin: auto 0; 
+
+    @media(max-width:768px){
+        font-size: rem(20);
+    }
+    @media(max-width:380px){
+        font-size: rem(15);
+    }
+
+    &:hover{
+        color: #2C9E37;
+    }
+}
+
+*::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #B9B9B9;
+    @media(max-width:768px){
+        font-size: 16px;
+        line-height: 20px;
+    }
+    @media(max-width:480px){
+        font-size: 14px;
+        line-height: 17px;
+    }
+    @media(max-width:320px){
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
